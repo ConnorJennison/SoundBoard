@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gd6-Bu-dUN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gd6-Bu-dUN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SoundBoard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="SoundBoard" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,13 +35,17 @@
                             <constraint firstItem="BKz-H4-6oR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="smp-Pu-Pfh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="8jy-hC-mZb">
+                    <navigationItem key="navigationItem" title="SoundBoard" id="8jy-hC-mZb">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7UI-nV-z52"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cz6-CJ-oS0">
                             <connections>
                                 <segue destination="ALW-zn-ton" kind="show" identifier="plussTapped" id="Tmu-eb-d49"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="BKz-H4-6oR" id="5Ac-M6-hOX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +107,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="fe7-oo-a7q" id="fcO-50-2XY"/>
                         <outlet property="nameTextField" destination="T2J-gq-26b" id="Npl-Mg-lCu"/>
+                        <outlet property="playButton" destination="LZo-N3-jhB" id="enU-8j-yZe"/>
                         <outlet property="recordButton" destination="b8a-Pk-O5d" id="KfS-qS-qWL"/>
                     </connections>
                 </viewController>
@@ -117,7 +123,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gd6-Bu-dUN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sBk-Vu-e8P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
